@@ -41,6 +41,35 @@ function tips(){
 }
 </script>
 
+<form>
+    <input type="radio" id="rd1" name="rd1" value="times" onclick="chooseOp()" >
+    <label for="rd1">*</label></br>
+      
+    <input type="radio" id="rd2" name="rd2" value="divide" onclick="chooseOp()">
+    <label for="rd2">/</label></br>
+      
+    <input type="radio" id="rd3" name="rd3" value="exponent" onclick="chooseOp()">
+    <label for="rd3">**</label></br>
+</form>
+
+<p id="radioresult"></p>
+
+<script>       
+function chooseOp(){
+    amount = document.getElementById("form1_amount").value
+    tipincrease = document.getElementById("form1_tip").value
+
+    if(document.getElementById("rd1").checked){
+        document.getElementById("radioresult").innerHTML=amount*tipincrease;
+    }
+    else if(document.getElementById("rd2").checked){
+        document.getElementById("radioresult").innerHTML=amount/tipincrease;
+    }
+    else if(document.getElementById("rd3").checked){
+        document.getElementById("radioresult").innerHTML=amount*tipincrease;
+    }   
+}
+</script>
 
 </body>
 </html> 
